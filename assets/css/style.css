@@ -882,7 +882,7 @@ ul.work li.active {
 }
 
 .single-blog a.blog-title {
-    font-size: 14px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
     -webkit-transition: .3s;
