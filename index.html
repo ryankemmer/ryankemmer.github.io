@@ -37,6 +37,32 @@
     <![endif]-->
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/bg/sag.JPG"/>
 
+    <script>
+        $(document).ready(function () {
+  // Open in new window
+  $(".single-blog").click(function () {
+    window.open($(this).find("a:first").attr("href"));
+    return false;
+  });
+
+  // Or use this to Open link in same window (similar to target=_blank)
+  $(".single-blog").click(function () {
+    window.location = $(this).find("a:first").attr("href");
+    return false;
+  });
+
+  // Show URL on Mouse Hover
+  $(".single-blog").hover(
+    function () {
+      window.status = $(this).find("a:first").attr("href");
+    },
+    function () {
+      window.status = "";
+    }
+  );
+});
+    </script>
+
 </head>
 
 <body>
@@ -151,6 +177,50 @@
         </div>
     </section>
     <!-- / END ABOUT DESIGN AREA -->
+        <!-- START SERVICES DESIGN AREA -->
+        <section class="service-area">
+            <div class="container">
+                <div class="row">
+                    <!-- START SINGLE SERVICE DESIGN AREA -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service wow fadeInUp" data-wow-delay="0.2s">
+                            <i class="fa fa-server"></i>
+                            <h2>Machine Learning</h2>
+                            <p>I build production-ready Machine Learning models <br></p>
+                        </div>
+                    </div>
+                    <!-- / END SINGLE SERVICE DESIGN AREA -->
+                    <!-- START SINGLE SERVICE DESIGN AREA -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service wow fadeInUp" data-wow-delay="0.4s">
+                            <i class="fa fa-laptop"></i>
+                            <h2>Software Engineering</h2>
+                            <p>I architect software and APIs, and contribute to open source projects</p>
+                        </div>
+                    </div>
+                    <!-- / END SINGLE SERVICE DESIGN AREA -->
+                    <!-- START SINGLE SERVICE DESIGN AREA -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service wow fadeInUp" data-wow-delay="0.6s">
+                            <i class="fa  fa-id-card"></i>
+                            <h2>Web Development</h2>
+                            <p>I build full-stack applications and make websites.</p>
+                        </div>
+                    </div>
+                    <!-- / END SINGLE SERVICE DESIGN AREA -->
+                    <!-- START SINGLE SERVICE DESIGN AREA -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service wow fadeInUp" data-wow-delay="0.8s">
+                            <i class="fa fa-music"></i>
+                            <h2>Music Production</h2>
+                            <p>I write and produce music with multiple local artists.</p>
+                        </div>
+                    </div>
+                    <!-- / END SINGLE SERVICE DESIGN AREA -->
+                </div>
+            </div>
+        </section>
+        <!-- / END SERVICES DESIGN AREA -->
 
         <!-- START BLOG PAGE DESIGN AREA -->
         <section class="service-area section-padding">
@@ -158,7 +228,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title">
-                            <h2>Data Science and Machine Learning</h2>
+                            <h2>Machine Learning and Data Science</h2>
                             <p>Most of my current work is centered around ML and Data Science. <br>
                                 After all, data is taking over the world ;)</p>
                         </div>
@@ -167,28 +237,59 @@
                 <div class="row">
                     <!-- START SINGLE BLOG DESIGN AREA -->
                     <div class="col-md-4 col-sm-6">
-                        <div class="single-blog">
-                            <img src="assets/images/blog/blog1.png" alt="">
-                            <a href="single-blog.html" class="blog-title">Machine Learning Techniques for Credit Card Fraud Detection</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                        <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
+                            <img src="assets/images/blog/sol.gif" alt="">
+                            <a href="https://solfege.ai/" class="blog-title">Solfege.ai</a>
+                            <p>A deep learning model built to detect hand symbols and translate them into sounds.</p>
+                            <p><a class="divLink" href="https://solfege.ai/">Webpage URL</a></p>
                         </div>
                     </div>
                     <!-- / END SINGLE BLOG DESIGN AREA -->
                     <!-- START SINGLE BLOG DESIGN AREA -->
                     <div class="col-md-4 col-sm-6">
-                        <div class="single-blog">
-                            <img src="assets/images/blog/blog2.png" alt="">
+                        <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
+                            <img src="assets/images/blog/dots.gif" alt="">
+                            <a href="https://ojs.aaai.org/index.php/HCOMP/article/view/7465" class="blog-title">Enhancing Collective Estimates by Aggregating Ordinal and Cardinal Inputs</a>
+                            <p>A study about ratings and rankings and how different aggregation affect them. Published in AAAI</p>
+                            <p><a class="divLink" href="https://ojs.aaai.org/index.php/HCOMP/article/view/7465">Webpage URL</a></p>
+                        </div>
+                    </div>
+                    <!-- / END SINGLE BLOG DESIGN AREA -->
+                    <!-- START SINGLE BLOG DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-blog wow fadeInUp" data-wow-delay="0.6s">
+                            <img src="assets/images/blog/eth2.gif" alt="">
+                            <a href="https://intellivest.org/" class="blog-title">Intellivest</a>
+                            <p>A tool that uses predictive modelling to help make better trades. Currently a work in progress, we have an active community on github building a platform, and various trasing strategies. </p>
+                            <p><a class="divLink" href="https://intellivest.org/">Webpage URL</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-blog wow fadeInUp" data-wow-delay="0.8s">
+                            <img src="assets/images/blog/cred.jpg" alt="">
+                            <a href="https://medium.com/analytics-vidhya/machine-learning-techniques-for-credit-card-fraud-detection-609421fbcc48" class="blog-title">Machine Learning Techniques for Credit Card Fraud Detection</a>
+                            <p>Machine learning has become an increasingly accessible and reliable method to detect fraudulent transactions.</p>
+                            <p><a class="divLink" href="https://medium.com/analytics-vidhya/machine-learning-techniques-for-credit-card-fraud-detection-609421fbcc48">Webpage URL</a></p>
+                        </div>
+                    </div>
+                    <!-- / END SINGLE BLOG DESIGN AREA -->
+                    <!-- START SINGLE BLOG DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-blog wow fadeInUp" data-wow-delay="1s">
+                            <img src="assets/images/blog/td.jpg" alt="">
                             <a href="https://ryankemmer.medium.com/algorithmic-trading-with-python-and-td-ameritrade-ec00fb47f57" class="blog-title">Algorithmic Trading with Python and TD Ameritrade</a>
                             <p>We are currently in the midst of a technological revolution in finance. With new advances in computing and artificial intelligence, there is a lot that can and will be automated.</p>
+                            <p><a class="divLink" href="https://ryankemmer.medium.com/algorithmic-trading-with-python-and-td-ameritrade-ec00fb47f57">Webpage URL</a></p>
                         </div>
                     </div>
                     <!-- / END SINGLE BLOG DESIGN AREA -->
                     <!-- START SINGLE BLOG DESIGN AREA -->
                     <div class="col-md-4 col-sm-6">
-                        <div class="single-blog">
-                            <img src="assets/images/blog/blog3.png" alt="">
-                            <a href="single-blog.html" class="blog-title">create website step by step</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                        <div class="single-blog wow fadeInUp" data-wow-delay="1.2s">
+                            <img src="assets/images/blog/clust.jpg" alt="">
+                            <a href="https://medium.com/analytics-vidhya/clustering-on-mixed-data-types-in-python-7c22b3898086" class="blog-title">Clustering on Mixed Data Types in Python</a>
+                            <p>Many datasets contain a mixture of categorical and continuous data. However, it is not always straightforward how to cluster datasets with mixed data types.</p>
+                            <p><a class="divLink" href="https://medium.com/analytics-vidhya/clustering-on-mixed-data-types-in-python-7c22b3898086">Webpage URL</a></p>
                         </div>
                     </div>
                     <!-- / END SINGLE BLOG DESIGN AREA -->
@@ -201,51 +302,6 @@
 
 
 
-
-    <!-- START SERVICES DESIGN AREA -->
-    <section class="service-area">
-        <div class="container">
-            <div class="row">
-                <!-- START SINGLE SERVICE DESIGN AREA -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-service wow fadeInUp" data-wow-delay="0.2s">
-                        <i class="fa fa-camera"></i>
-                        <h2>Machine Learning</h2>
-                        <p>I build production-ready Machine Learning Models </p>
-                    </div>
-                </div>
-                <!-- / END SINGLE SERVICE DESIGN AREA -->
-                <!-- START SINGLE SERVICE DESIGN AREA -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-service wow fadeInUp" data-wow-delay="0.4s">
-                        <i class="fa fa-laptop"></i>
-                        <h2>Software Engineering</h2>
-                        <p>I architect software solutions and APIs</p>
-                    </div>
-                </div>
-                <!-- / END SINGLE SERVICE DESIGN AREA -->
-                <!-- START SINGLE SERVICE DESIGN AREA -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-service wow fadeInUp" data-wow-delay="0.6s">
-                        <i class="fa fa-wordpress"></i>
-                        <h2>Web Development</h2>
-                        <p>I build full-stack applications and make websites.</p>
-                    </div>
-                </div>
-                <!-- / END SINGLE SERVICE DESIGN AREA -->
-                <!-- START SINGLE SERVICE DESIGN AREA -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-service wow fadeInUp" data-wow-delay="0.8s">
-                        <i class="fa fa-star"></i>
-                        <h2>Music</h2>
-                        <p>I write and produce music with multiple local artists.</p>
-                    </div>
-                </div>
-                <!-- / END SINGLE SERVICE DESIGN AREA -->
-            </div>
-        </div>
-    </section>
-    <!-- / END SERVICES DESIGN AREA -->
 
     <!-- START WORK EXPERIENCE DESIGN AREA -->
     <section id="resume" class="work-experience-area section-padding">
